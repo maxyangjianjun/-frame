@@ -60,7 +60,7 @@ defined('UPL_PATH')  or define('UPL_PATH',	ROOT.'upload'.			DIRECTORY_SEPARATOR)
 
 
 /*
- * Loading boot class files
+ * 初始发引导类，并启动
  * */
 require_once APP_PATH.'bootstrap.php';
 $bootstrap =new bootstrap() ;
