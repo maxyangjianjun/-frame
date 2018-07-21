@@ -1,4 +1,4 @@
-copyright yangjianjun 2011-2012
+copyright yangjianjun 2011-2015
 author yangjianjun
-since create date: 2011-11-14
-version 0.1.1
+since create date: 2011-15-14
+version 0.1.2
