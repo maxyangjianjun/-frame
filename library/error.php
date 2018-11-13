@@ -1,7 +1,11 @@
 <?php
+
+/**
+ * merror deal class use it to controller man error
+ */
 class Error
 {
-	//先定义一个函数，也可以定义在其他的文件中，再用require()调用  
+	//You can define a function first, or you can define it in other files, and then call it with require()
 	public static function myErrorHandler($errno, $errstr,$errfile,$errline)
 	{  
 		$logStr = "";
@@ -38,7 +42,7 @@ class Error
 	    }  
 	    //log
 	    file_put_contents(LOG_PATH."output_errors_".date('Y').".log" , $logStr,FILE_APPEND) ;
-		//如果局域网测试段ip提示所有错误，否则屏蔽
+		//If LAN test segment IP prompts all errors, otherwise shield
 		$ip = Common::getIp() ; 
 		if (!preg_match("/(^192.168.*)|(^127.*)|(^10.*)/i", $ip)){
 			$logStr=str_replace(getcwd(),"",$logStr);  
@@ -47,7 +51,7 @@ class Error
 		
 	    return true;  
 	}  
-	//先定义一个函数，也可以定义在其他的文件中，再用require()调用  
+	//You can define a function first, or you can define it in other files, and then call it with require()
 	public static function myExceptionHandler($e)
 	{   
 		$logStr ='';
@@ -58,7 +62,7 @@ class Error
 		$logStr.= '<br />TraceAsString='.$e->getTraceAsString();
 		
 		file_put_contents(LOG_PATH."output_exception_".date('Y').".log" , $logStr,FILE_APPEND) ;
-		//如果局域网测试段ip提示所有错误，否则屏蔽
+		//If LAN test segment IP prompts all errors, otherwise shield
 		$ip = Common::getIp() ; 
 		if (preg_match("/(^192.168.*)|(^127.*)|(^10.*)/i", $ip)){
 			echo $logStr ; 

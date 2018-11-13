@@ -1,5 +1,8 @@
 <?php
-//frame class Singleton
+
+/**
+ * frame class Singleton use it to do main request
+ */
 class Frame
 {
 	public  $request 	= 'request';
