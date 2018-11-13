@@ -1,11 +1,10 @@
 <?php
 /*
  * Unified import documents
- *
- *
+ * update same import infomation
+ *  
  * File Extension
  */
-define('EXT', '.php');
 /*
  * Define the root of the site
  */
